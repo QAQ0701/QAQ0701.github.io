@@ -5,5 +5,5 @@
 2.  创建个人网站，github或netlify；
 3.   信息图表传到你的个人网站上。
 
-【作业1链接】（https://QAQ0701.github.io)
+【作业1链接】（https://qaq0701.github.io/companies_by_state.html)
 
