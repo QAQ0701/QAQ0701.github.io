@@ -5,15 +5,92 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>我的主页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #007acc;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    a {
+      text-decoration: none;
+      color: #007acc;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      background: #fff;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
-  <h1>You can view my graph at:</h1>
-  <a href="https://qaq0701.github.io/companies_by_state.html">Click Here</a>
+  <div class="container">
+    <h1>Welcome to My Homepage</h1>
 
-  <h2>作业列表</h2>
-  <ul>
-      <li><a href="search.html">课堂练习：搜索引擎网页</a> - 实现一个简单的搜索页面</li>
-      <li><a href="sherlock_graph_presentation.html">课后作业：人物共现分析网页</a> - 展示共现关系图</li>
-  </ul>
+    <p>You can view my graph at:</p>
+    <a href="https://qaq0701.github.io/companies_by_state.html" target="_blank">Click Here</a>
+
+    <h2>Assignment List</h2>
+    <ul>
+      <li>
+        <a href="search.html" target="_blank">Class Exercise: Search Engine Webpage</a><br>
+        <small>Implementing a simple search page</small>
+      </li>
+      <li>
+        <a href="sherlock_graph_presentation.html" target="_blank">Homework: Character Co-occurrence Analysis Webpage</a><br>
+        <small>Showcasing co-occurrence graphs</small>
+      </li>
+    </ul>
+
+    <footer>
+      <p>&copy; 2025 My Homepage. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
