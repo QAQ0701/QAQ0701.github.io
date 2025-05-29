@@ -1,6 +1,6 @@
 # QAQ0701.github.io
 ## 2402010621 
-##（https://qaq0701.github.io/index.html)
+## https://qaq0701.github.io/index.html
 ## 1. 作业1
 1. 结合这两周课上内容，创建一个信息图表，数据源自选；
 2.  创建个人网站，github或netlify；
