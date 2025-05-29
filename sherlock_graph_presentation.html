@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Relationship Graph</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        color: #222;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1rem;
+        color: #555;
+      }
+
+      .graph-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+        height: 600px; /* Ensure fixed height for container */
+      }
+
+      .graph-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      footer p {
+        font-size: 0.9rem;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Character Relationship Graph</h1>
+        <p>A Visualization of character interactions from Sherlock Holmes.</p>
+      </header>
+
+      <div class="graph-container">
+        <!-- Embed your visualized graph HTML here -->
+        <iframe src="./output/sherlock_relationship_graph.html"></iframe>
+      </div>
+
+      <footer>
+        <p></p>
+      </footer>
+    </div>
+  </body>
+</html>
