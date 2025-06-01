@@ -19,7 +19,7 @@ https://qaq0701.github.io/index.html
 【作业2链接】（https://qaq0701.github.io/sherlock_graph_presentation.html)
 
 ## 4. 期末大作业
-作业repo链接（https://qaq0701.github.io/search.html)https://github.com/QAQ0701/GasPriceAnalysis)
+作业repo链接（https://github.com/QAQ0701/GasPriceAnalysis.git)
 可视化：
 
 1. https://github.com/QAQ0701/GasPriceAnalysis/blob/5721f4b4e5bb37438ec6ed87cada20c9b51d5d83/output/heatmap.html
