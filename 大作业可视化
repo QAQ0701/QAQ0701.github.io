@@ -1,7 +1,0 @@
-<iframe 
-    src="https://QAQ0701.github.io/GasPriceAnalysis/main/output/interactive_graph.html" 
-    width="100%" 
-    height="800px" 
-    style="border:none;"
-    title="Gas Price Graph">
-</iframe>
