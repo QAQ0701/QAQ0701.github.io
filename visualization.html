@@ -35,11 +35,20 @@
   <body>
     <div class="container">
       <h1>Data Visualization</h1>
-      
-      <p style="text-align: center;font-size: 12px;"> 
-        08:00 – morning, 14:00 – afternoon, 20:00 – evening, 02:00 – midnight <br>
-        (Each time window allows a +1 hour range due to system shortcut limitations on macOS.)
+
+      <p style="text-align: center; font-size: 12px">
+        08:00 – morning, 14:00 – afternoon, 20:00 – evening, 02:00 – midnight
+        <br />
+        (Each time window allows a +1 hour range due to system shortcut
+        limitations on macOS.)
       </p>
+
+      <h2>Heatmap of Average Gas Price Per Station</h2>
+      <iframe
+        src="output/heatmap.html"
+        class="iframe-container"
+        title="Heatmap"
+      ></iframe>
 
       <h2>Interactive Graph</h2>
       <iframe
@@ -50,13 +59,6 @@
 
       <h2>Time Series Image</h2>
       <img src="output/time_series.png" alt="Time Series Graph" />
-
-      <h2>Heatmap</h2>
-      <iframe
-        src="output/heatmap.html"
-        class="iframe-container"
-        title="Heatmap"
-      ></iframe>
     </div>
   </body>
 </html>
