@@ -70,6 +70,42 @@
         title="Price vs. Market Heatmap"
       ></iframe>
 
+      <h2>Price vs. Market by Brand</h2>
+      <p style="font-size: 12px">
+        Each point is one station's average gap to the same day's market median.
+        Brands with fewer than 3 stations are grouped as Other. The Kruskal-Wallis
+        p-value says how likely gaps this large would be if brands didn't really differ.
+      </p>
+      <iframe
+        src="https://d15o5553r05um7.cloudfront.net/brands.html"
+        class="iframe-container"
+        title="Price vs. Market by Brand"
+      ></iframe>
+
+      <h2>How Prices Change</h2>
+      <p style="font-size: 12px">
+        Left: every station price change, compared with that station's previous price.
+        Right: after the market median moves by 3¢ or more in a day, the share of
+        stations that have followed it (moved 2¢ or more the same way) over the next 48 hours.
+        A faster red curve means prices rise quickly but fall slowly ("rockets and feathers").
+      </p>
+      <iframe
+        src="https://d15o5553r05um7.cloudfront.net/price_changes.html"
+        class="iframe-container"
+        title="How Prices Change"
+      ></iframe>
+
+      <h2>Who Moves First</h2>
+      <p style="font-size: 12px">
+        For each market move, the stations that followed are ranked by how soon they
+        changed price (0 = first, 100 = last), then averaged by brand.
+      </p>
+      <iframe
+        src="https://d15o5553r05um7.cloudfront.net/leaders.html"
+        class="iframe-container"
+        title="Who Moves First"
+      ></iframe>
+
       <h2>Time Series Graph</h2>
       <iframe
         src="https://d15o5553r05um7.cloudfront.net/time_series.html"
