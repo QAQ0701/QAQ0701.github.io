@@ -5,30 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gas Price Analyser</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
       body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
+        color: #222;
+        background: #fff;
       }
       .container {
-        width: 90%;
-        margin: auto;
+        max-width: 1200px;
+        margin: 0 auto;
         padding: 20px;
       }
       h1 {
         text-align: center;
         margin-bottom: 20px;
+        font-size: clamp(1.6rem, 6vw, 2rem);
       }
+      h2 {
+        font-size: clamp(1.15rem, 4.5vw, 1.5rem);
+        margin: 28px 0 8px;
+      }
+      .note {
+        font-size: 13px;
+        line-height: 1.45;
+        color: #444;
+        margin: 0 0 10px;
+      }
+      .intro {
+        text-align: center;
+      }
+      /* Each frame is sized to its chart; charts fill whatever height they're given */
       .iframe-container {
+        display: block;
         width: 100%;
         height: 600px;
         border: 1px solid #ccc;
         margin-bottom: 20px;
       }
-      img {
-        display: block;
-        max-width: 100%;
-        margin: 20px auto;
+      .iframe-container.short {
+        height: 470px;
+      }
+      .iframe-container.tall {
+        height: 1000px;
+      }
+      @media (max-width: 600px) {
+        .container {
+          padding: 12px;
+        }
+        .iframe-container.map {
+          height: 460px;
+        }
+        .iframe-container.chart {
+          height: 560px;
+        }
+        /* "How Prices Change" stacks its two panels on phones */
+        .iframe-container.stacked {
+          height: 900px;
+        }
+        .iframe-container.tall {
+          height: 900px;
+        }
       }
     </style>
   </head>
@@ -36,7 +76,7 @@
     <div class="container">
       <h1>Data Visualization</h1>
 
-      <p style="text-align: center; font-size: 12px">
+      <p class="note intro">
         06:00– 12:00 : Morning, 12:00 – 17:00 : Afternoon, 17:00 – 24:00 :
         Evening, 00:00 – 06:00 : Midnight
         <br />
@@ -47,92 +87,91 @@
       <h2>Heatmap of Most Recently Updated Price Per Station</h2>
       <iframe
         src="https://d15o5553r05um7.cloudfront.net/heatmap_today.html"
-        class="iframe-container"
+        class="iframe-container map"
         title="Heatmap"
       ></iframe>
 
       <h2>Heatmap of Historical Average Price Per Station</h2>
       <iframe
         src="https://d15o5553r05um7.cloudfront.net/heatmap.html"
-        class="iframe-container"
+        class="iframe-container map"
         title="Heatmap"
       ></iframe>
 
       <h2>Heatmap of Price vs. Market Per Station</h2>
-      <p style="font-size: 12px">
+      <p class="note">
         Average ¢/L each station charges above (red) or below (green) the median
         of all prices posted the same day. Comparing to the same day's market
         makes stations fair to compare even when their data covers different periods.
       </p>
       <iframe
         src="https://d15o5553r05um7.cloudfront.net/heatmap_relative.html"
-        class="iframe-container"
+        class="iframe-container map"
         title="Price vs. Market Heatmap"
       ></iframe>
 
       <h2>Price vs. Market by Brand</h2>
-      <p style="font-size: 12px">
+      <p class="note">
         Each point is one station's average gap to the same day's market median.
         Brands with fewer than 3 stations are grouped as Other. The Kruskal-Wallis
         p-value says how likely gaps this large would be if brands didn't really differ.
       </p>
       <iframe
         src="https://d15o5553r05um7.cloudfront.net/brands.html"
-        class="iframe-container"
+        class="iframe-container chart"
         title="Price vs. Market by Brand"
       ></iframe>
 
       <h2>How Prices Change</h2>
-      <p style="font-size: 12px">
-        Left: every station price change, compared with that station's previous price.
-        Right: after the market median moves by 3¢ or more in a day, the share of
+      <p class="note">
+        First panel: every station price change, compared with that station's previous price.
+        Second panel: after the market median moves by 3¢ or more in a day, the share of
         stations that have followed it (moved 2¢ or more the same way) over the next 48 hours.
         A faster red curve means prices rise quickly but fall slowly ("rockets and feathers").
       </p>
       <iframe
         src="https://d15o5553r05um7.cloudfront.net/price_changes.html"
-        class="iframe-container"
+        class="iframe-container stacked"
         title="How Prices Change"
       ></iframe>
 
       <h2>Who Moves First</h2>
-      <p style="font-size: 12px">
+      <p class="note">
         For each market move, the stations that followed are ranked by how soon they
         changed price (0 = first, 100 = last), then averaged by brand.
       </p>
       <iframe
         src="https://d15o5553r05um7.cloudfront.net/leaders.html"
-        class="iframe-container"
+        class="iframe-container chart"
         title="Who Moves First"
       ></iframe>
 
       <h2>Time Series Graph</h2>
       <iframe
         src="https://d15o5553r05um7.cloudfront.net/time_series.html"
-        class="iframe-container"
+        class="iframe-container chart"
         title="Time Series Graph"
       ></iframe>
 
       <h2>Day of Week Comparison Bar Graph</h2>
       <iframe
         src="https://d15o5553r05um7.cloudfront.net/bar_chart.html"
-        class="iframe-container"
+        class="iframe-container chart"
         title="Day of Week Comparison Bar Graph"
       ></iframe>
 
       <h2>Scatter Plot Graphs</h2>
       <iframe
         src="https://d15o5553r05um7.cloudfront.net/interactive_graph.html"
-        class="iframe-container"
+        class="iframe-container tall"
         title="Interactive Graph"
       ></iframe>
 
       <h2>Data Coverage</h2>
       <iframe
         src="https://d15o5553r05um7.cloudfront.net/coverage.html"
-        class="iframe-container"
+        class="iframe-container short"
         title="Data Coverage"
-        style="height: 490px"
       ></iframe>
     </div>
   </body>
