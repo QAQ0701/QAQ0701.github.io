@@ -20,8 +20,5 @@ https://qaq0701.github.io/index.html
 
 ## 4. 期末大作业
 作业repo链接（https://github.com/QAQ0701/GasPriceAnalysis.git)
-可视化：
-1.	https://github.com/QAQ0701/GasPriceAnalysis/blob/main/output/heatmap.html
-2.	https://github.com/QAQ0701/GasPriceAnalysis/blob/main/output/time_series.png
-3.	https://github.com/QAQ0701/GasPriceAnalysis/blob/main/output/interactive_graph.html
+可视化：https://qaq0701.github.io/visualization.html
 
